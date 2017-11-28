@@ -1,0 +1,7 @@
+<%= form_tag update_task_path action=update_task_path(id:@task.id), method='post' do -%>
+    <%= hidden_field_tag :id, value = @task.id %>
+    <%= text_field_tag :name, value = @task.name %>
+    <%= text_field_tag :description, value = @task.description %>
+    <%= submit_tag "save" %>
+    <%= link_to 'Back', '/' %>
+<%end %>
